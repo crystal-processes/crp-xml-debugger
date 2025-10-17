@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bug icon">
+    <defs>
+        <style>
+            .bg { fill: none; }
+            .body { fill: #22B573; stroke: #155E3B; stroke-width: 4; stroke-linejoin: round; }
+            .head { fill: #1B8F51; stroke: #155E3B; stroke-width: 3; }
+            .leg { stroke: #155E3B; stroke-width: 3; stroke-linecap: round; fill: none; }
+            .antenna { stroke: #155E3B; stroke-width: 3; stroke-linecap: round; fill: none; }
+            .eye { fill: #FFFFFF; stroke: #155E3B; stroke-width: 1.5; }
+            .pupil { fill: #155E3B; }
+            .stripe { fill: rgba(255,255,255,0.12); }
+            .outline { fill: none; stroke: rgba(0,0,0,0.06); stroke-width: 1; stroke-linejoin: round; }
+            .text { fill: #155E3B; font-family: "JetBrains Mono", Consolas, monospace; font-weight: 600; font-size: 16px; letter-spacing: 1px; text-anchor: middle; }
+        </style>
+    </defs>
+
+    <!-- subtle outer outline -->
+    <path class="outline" d="M64 12c28 0 44 20 44 44s-16 44-44 44-44-20-44-44 16-44 44-44z"/>
+
+    <!-- body (oval) -->
+    <ellipse class="body" cx="64" cy="68" rx="28" ry="36"/>
+
+    <!-- central vertical stripe (subtle highlight) -->
+    <path class="stripe" d="M64 36c4 0 8 14 8 32s-4 32-8 32-8-14-8-32 4-32 8-32z"/>
+
+    <!-- head -->
+    <circle class="head" cx="64" cy="36" r="14"/>
+
+    <!-- eyes -->
+    <ellipse class="eye" cx="56" cy="34" rx="4.2" ry="5"/>
+    <ellipse class="eye" cx="72" cy="34" rx="4.2" ry="5"/>
+    <circle class="pupil" cx="56" cy="35" r="1.7"/>
+    <circle class="pupil" cx="72" cy="35" r="1.7"/>
+
+    <!-- antennae -->
+    <path class="antenna" d="M54 24 C48 18, 42 18, 38 14"/>
+    <path class="antenna" d="M74 24 C80 18, 86 18, 90 14"/>
+
+    <!-- legs (left) -->
+    <path class="leg" d="M42 54 C34 56, 30 66, 26 70"/>
+    <path class="leg" d="M42 68 C34 70, 30 78, 26 82"/>
+    <path class="leg" d="M42 82 C34 84, 30 92, 26 96"/>
+
+    <!-- legs (right) -->
+    <path class="leg" d="M86 54 C94 56, 98 66, 102 70"/>
+    <path class="leg" d="M86 68 C94 70, 98 78, 102 82"/>
+    <path class="leg" d="M86 82 C94 84, 98 92, 102 96"/>
+
+    <!-- subtle dividing line down the back -->
+    <path d="M64 40 v44" stroke="#155E3B" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+    <!-- small decorative rivets -->
+    <circle cx="64" cy="56" r="2.2" fill="#155E3B"/>
+    <circle cx="64" cy="68" r="2.2" fill="#155E3B"/>
+    <circle cx="64" cy="80" r="2.2" fill="#155E3B"/>
+
+
+    <!-- text label -->
+    <text x="64" y="120" class="text">XML Debugger</text>
+</svg>

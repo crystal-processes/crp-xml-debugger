@@ -1,0 +1,40 @@
+{
+  "entries": [
+    {
+      "xmlTag": "'userTask'.equals(xmlTag.name)",
+      "className": "org.flowable.engine.impl.bpmn.behavior.UserTaskActivityBehavior",
+      "lineNumber": 92,
+      "condition": "'\"'+xmlTag.getAttribute('id').getValue() +'\".equals(execution.getActivityId()) && \"'+ xmlTag.getTreeParent().getAttribute('id').getValue()+ '\".equals(execution.getProcessDefinitionKey())'"
+    },
+    {
+      "xmlTag": "'startEvent'.equals(xmlTag.name)",
+      "className": "org.flowable.engine.impl.bpmn.behavior.FlowNodeActivityBehavior",
+      "lineNumber": 38,
+      "condition": "'\"'+xmlTag.getAttribute('id').getValue() +'\".equals(execution.getActivityId()) && \"'+ xmlTag.getTreeParent().getAttribute('id').getValue()+ '\".equals(execution.getProcessDefinitionKey())'"
+    },
+    {
+      "xmlTag": "'sequenceFlow'.equals(xmlTag.name)",
+      "className": "org.flowable.engine.impl.bpmn.behavior.FlowNodeActivityBehavior",
+      "lineNumber": 38,
+      "condition": "'\"'+xmlTag.getAttribute('id').getValue() +'\".equals(execution.getActivityId()) && \"'+ xmlTag.getTreeParent().getAttribute('id').getValue()+ '\".equals(execution.getProcessDefinitionKey())'"
+    },
+    {
+      "xmlTag": "'serviceTask'.equals(xmlTag.name) && tag.getAttributeValue('expression', 'http://flowable.org/bpmn') != null",
+      "className": "org.flowable.engine.impl.bpmn.behavior.ServiceTaskExpressionActivityBehavior",
+      "lineNumber": 75,
+      "condition": "'\"'+xmlTag.getAttribute('id').getValue() +'\".equals(execution.getActivityId()) && \"'+ xmlTag.getTreeParent().getAttribute('id').getValue()+ '\".equals(execution.getProcessDefinitionKey())'"
+    },
+    {
+      "xmlTag": "'serviceTask'.equals(xmlTag.name) && tag.getAttributeValue('delegateExpression', 'http://flowable.org/bpmn') != null",
+      "className": "org.flowable.engine.impl.bpmn.behavior.ServiceTaskDelegateExpressionActivityBehavior",
+      "lineNumber": 85,
+      "condition": "'\"'+xmlTag.getAttribute('id').getValue() +'\".equals(execution.getActivityId()) && \"'+ xmlTag.getTreeParent().getAttribute('id').getValue()+ '\".equals(execution.getProcessDefinitionKey())'"
+    },
+    {
+      "xmlTag": "'serviceTask'.equals(xmlTag.name) && tag.getAttributeValue('class', 'http://flowable.org/bpmn') != null",
+      "className": "org.flowable.engine.impl.bpmn.behavior.ServiceTaskJavaDelegateActivityBehavior",
+      "lineNumber": 57,
+      "condition": "'\"'+xmlTag.getAttribute('id').getValue() +'\".equals(execution.getActivityId()) && \"'+ xmlTag.getTreeParent().getAttribute('id').getValue()+ '\".equals(execution.getProcessDefinitionKey())'"
+    }
+  ]
+}

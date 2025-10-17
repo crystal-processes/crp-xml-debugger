@@ -1,0 +1,34 @@
+<idea-plugin>
+    <id>crystal-processes-xml-debugger</id>
+
+    <name>CRP XML Debugger</name>
+
+    <vendor email="martin.grofcik@crystalprocesses.com" url="https://github.com/crystal-processes/crp-flowable-ex">crystal processes</vendor>
+
+    <description><![CDATA[
+    <strong>CRP XML Debugger</strong> adds debugging support for XML-based model such as BPMN and CMMN executed in java.
+It enables developers to set breakpoints directly in XML files and connect them to corresponding Java code,
+simplifying the analysis of model executions like <strong>Flowable<strong>, Camunda, and Activiti.
+
+Features:
+<ul>
+<li>Add breakpoints directly in BPMN/CMMN XML files</li>
+<li>Conditional breakpoints based on execution attributes</li>
+<li>Synchronization with Java code execution</li>
+</ul>
+
+  ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.xml</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Register custom breakpoint type -->
+        <xdebugger.breakpointType implementation="io.github.crystalprocesses.xml.debugger.XmlBreakpointType"/>
+        <postStartupActivity implementation="io.github.crystalprocesses.xml.debugger.XmlDebuggerPostStartupActivity"/>
+        <projectService serviceImplementation="io.github.crystalprocesses.xml.debugger.XmlDebuggerSettings" />
+        <projectConfigurable
+                instance="io.github.crystalprocesses.xml.debugger.XmlDebuggerConfigurable"/>
+    </extensions>
+</idea-plugin>
