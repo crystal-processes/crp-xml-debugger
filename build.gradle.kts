@@ -1,27 +1,36 @@
+import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
+
 plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "1.9.25"
-    id("org.jetbrains.intellij") version "1.17.4"
+    id("org.jetbrains.intellij.platform") version "2.10.1"
+}
+
+repositories {
+    mavenCentral()
+
+    intellijPlatform {
+        defaultRepositories()
+    }
 }
 
 group = "io.github.crystal-processes"
-version = "1.0.0.1"
+version = "1.0.0.2"
 
 repositories {
     mavenCentral()
 }
 
-// Configure Gradle IntelliJ Plugin
-// Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
-intellij {
-    version.set("2024.1.7")
-    type.set("IC") // Target IDE Platform
-
-    plugins.set(listOf("java"))
-}
-
 dependencies {
-    implementation("org.codehaus.groovy:groovy-jsr223:3.0.21") // or the latest 3.x
+    implementation("org.codehaus.groovy:groovy-jsr223:3.0.21")
+
+    intellijPlatform {
+        val version = providers.gradleProperty("platformVersion")
+
+        create(IntelliJPlatformType.IntellijIdeaCommunity, version)
+
+        bundledPlugin("com.intellij.java")
+    }
 }
 
 tasks {
