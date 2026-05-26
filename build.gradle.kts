@@ -3,7 +3,7 @@ import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
 plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "1.9.25"
-    id("org.jetbrains.intellij.platform") version "2.10.1"
+    id("org.jetbrains.intellij.platform") version "2.16.0"
 }
 
 repositories {
@@ -15,7 +15,7 @@ repositories {
 }
 
 group = "io.github.crystal-processes"
-version = "1.0.0.2"
+version = "1.0.0.3"
 
 repositories {
     mavenCentral()
